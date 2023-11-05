@@ -16,9 +16,18 @@ const NavBar = () => {
             <div id="navbarBasicExample" className="navbar-menu">
                 <div className="navbar-start">
                     <a className="navbar-item">Inicio</a>
-                    <a className="navbar-item">Categorias</a>
-                    <a className="navbar-item">Ayuda</a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Categorias</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">Categ 3</a>
+                            <a class="navbar-item">Categ 2</a>
+                            <a class="navbar-item">Categ 2</a>
+                            <a class="navbar-item">Categ 4</a>
+                        </div>
                 </div>
+                <a className="navbar-item">Ayuda</a>
+            </div>
+
                 <CartWidget/>
                 <div className="navbar-end">
                     <div className="navbar-item">
