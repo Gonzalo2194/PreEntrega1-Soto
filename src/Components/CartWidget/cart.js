@@ -1,6 +1,5 @@
 import cart from'./asset/carrito.png'
 
-
 const CartWidget = () => {
     return (
         <div>
