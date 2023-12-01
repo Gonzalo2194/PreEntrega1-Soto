@@ -4,7 +4,7 @@ function App (){
     return (
         <div>
             <BrowserRouter>
-            <NavBar />
+            <NavBar/>
             <Routes>
                 <Route path="/" element={<ItemListContainer/>} />
                 <Route path="/category/:categoryId"/>
@@ -16,3 +16,5 @@ function App (){
         </div>
         );
     }
+
+    export default App;
