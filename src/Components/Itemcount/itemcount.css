@@ -22,12 +22,12 @@
 
 .decrementbutton,
 .incrementbutton {
-    font-size: 1.5rem;
+    font-size: 1rem; 
     background-color: #dbae34;
     color: #fff;
     border: none;
     padding: 5px 10px;
-    margin: 0 10px;
+    margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
@@ -37,7 +37,7 @@
 }
 
 .number {
-    font-size: 1.2rem;
+    font-size: 1rem; 
     margin: 0 10px;
 }
 
@@ -46,16 +46,16 @@
     background-color: #27ae60;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px; 
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
 
-    &:disabled {
+.button:disabled {
     background-color: #95a5a6;
     cursor: not-allowed;
-    }
+}
 
-    &:hover:enabled {
+.button:hover:enabled {
     background-color: #219c56;
-    }
 }

@@ -1,14 +1,24 @@
 
 .Carditem {
     width: 150px;
-    height: 320px;
-    margin: 8px; 
+    height: auto; 
+    margin: 8px 8px 8px 50px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
 }
 
 .Carditem:hover {
@@ -17,7 +27,7 @@
 
 .Header {
     text-align: center;
-    padding: 8px; 
+    padding: 8px;
     background-color: #f8f8f8;
 }
 
@@ -33,29 +43,28 @@
     border-bottom: 1px solid #ddd;
 }
 
-.Info {
-    font-size: 0.8rem; 
-    margin: 4px; 
-    color: #555;
-}
-
+.Info,
 .stock {
-    font-size: 0.8rem; 
-    margin: 4px; 
+    font-size: 0.8rem;
+    margin: 4px;
     color: #555;
+    text-align: center; 
 }
 
 .Itemfooter {
-    padding: 8px; 
-    text-align: center;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .Option {
     background-color: #007BFF;
     color: #fff;
-    padding: 4px 8px; 
+    padding: 4px 8px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 0.8rem; 
+    font-size: 0.8rem;
+    margin-top: 8px; 
 }

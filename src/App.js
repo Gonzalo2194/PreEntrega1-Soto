@@ -1,20 +1,18 @@
 
-function App (){
-
+function App() {
     return (
         <div>
-            <BrowserRouter>
-            <NavBar/>
+        <BrowserRouter>
+            <NavBar />
             <Routes>
-                <Route path="/" element={<ItemListContainer/>} />
-                <Route path="/category/:categoryId"/>
-                <Route path="/item/:itemId"/>
-                <Route path="+" element ={<h1>404 ERROR</h1>}/>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/category/:categoryId" element={<CategoryView />} />
+            <Route path="/item/:itemId" element={<ItemDetailView />} />
+            <Route path="+" element={<h1>404 ERROR</h1>} />
             </Routes>
-
-            </BrowserRouter>
+        </BrowserRouter>
         </div>
-        );
-    }
+    );
+}
 
-    export default App;
+export default App;
