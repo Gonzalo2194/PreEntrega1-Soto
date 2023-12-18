@@ -1,5 +1,7 @@
+import { NavLink,Link } from "react-router-dom";
 import CartWidget from "../CartWidget/cart";
 import logo from'./asset/logo.jpg';
+
 
 
 const NavBar = () => {
@@ -20,15 +22,15 @@ const NavBar = () => {
                 </a>
             </div>
             <div id="navbarBasicExample" className="navbar-menu">
-                <div className="navbar-start">
-                    <a className="navbar-item">Inicio</a>
-                    <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">Categorias</a>
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">Electrónica y Tecnología</a>
-                            <a class="navbar-item">Hogar y Decoración</a>
-                            <a class="navbar-item">Ropa y Accesorios</a>
-                        </div>
+            <div className="navbar-start">
+                <a className="navbar-item" to="/">Inicio</a>
+                <div className="navbar-item has-dropdown is-hoverable">
+                <a className="navbar-link">Categorias</a>
+                <div className="navbar-dropdown">
+                    <NavLink to ={"/category/Electrónica y Tecnología"} className="navbar-item">Electrónica y Tecnología</NavLink>
+                    <NavLink to= {"/category/Hogar y Decoración"} className="navbar-item" >Hogar y Decoración</NavLink>
+                    <NavLink to= {"/category/Ropa y Accesorios"} className="navbar-item" >Ropa y Accesorios</NavLink>
+                </div>
                 </div>
                 <a className="navbar-item">Ayuda</a>
             </div>

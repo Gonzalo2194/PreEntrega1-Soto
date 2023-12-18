@@ -55,7 +55,7 @@ const Products = [
         id:'5',
         name:'Iphone 12 pro max',
         price: 32000,
-        category:'Electrónica y Tecnología',
+        category:'Ropa y Accesorios',
         img:'https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-12-pro-max/iphone-12-pro-max-graphite.jpg',
         stock:10,
         description:'lorem ipsum d',
