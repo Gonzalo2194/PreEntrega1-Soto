@@ -1,15 +1,23 @@
+import React from 'react';
+import ItemDetail from '../Itemdetalle/Itemdetail.js';
 
-import Item from '../Item/item.js';
 
-const Itemlist = ({ products }) => {
-    return (
-        <div className="columns is-multiline is-centerednpm">
-            {products.map((prod) => (
-                <div key={prod.id} className="column is-one-third">
-                    <Item {...prod} />
-                </div>
-            ))}
-        </div>
-    );
+const Itemlist = ({ products, expandedItemId, onToggleExpand }) => {
+  return (
+    <div className="item-list">
+      {products.map((product) => (
+        <ItemDetail
+          key={product.id}
+          {...product}
+          expanded={expandedItemId === product.id}
+          onToggleExpand={() => onToggleExpand(product.id)}
+        />
+      ))}
+    </div>
+  );
 };
-export default Itemlist
+
+export default Itemlist;
+
+
+

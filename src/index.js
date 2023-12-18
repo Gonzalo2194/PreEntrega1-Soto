@@ -16,8 +16,6 @@ function App() {
         <div>
             <NavBar/>
             <ItemListContainer greeting={"Bienvenido a compraclic"}/>
-            <ItemDetailContainer/>
-            <Itemcount initial={1} stock={50} onAdd={(quantity) => console.log('Cantidad agregada',quantity)}/>
         </div>
     );
 }
