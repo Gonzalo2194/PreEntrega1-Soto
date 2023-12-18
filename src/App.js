@@ -11,11 +11,11 @@ function App() {
 return (
     <Router>
     <div>
-        <NavBar />
+        <NavBar/>
         <Routes>
             <Route path="/" element={<ItemListContainer greeting="Bienvenido a compraclic" />} />
             <Route path="/category/:categoryId" element={<ItemListContainer />} />
-            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path="/product/:productId" element={<ItemDetailContainer />} />
             <Route path="*" element={<h1>404 ERROR</h1>} />
         </Routes>
     </div>

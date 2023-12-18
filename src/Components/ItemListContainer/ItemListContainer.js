@@ -11,17 +11,23 @@ const ItemListContainer = ({ greeting }) => {
     color: '#b97b29',
     fontWeight: 'bold',
     fontSize: '1.5rem',
+    
   };
+
 
   const [products, setProducts] = useState([]);
 
   const { categoryId } = useParams();
+  
+
 
   const [expandedItemId, setExpandedItemId] = useState(null);
 
   useEffect(() => {
+
     const asyncFunc = categoryId ? getProductsByCategory : getProducts;
-  
+
+
     asyncFunc(categoryId)
       .then(response => {
         setProducts(response);
@@ -44,6 +50,7 @@ const ItemListContainer = ({ greeting }) => {
 };
 
 export default ItemListContainer;
+
 
 
 

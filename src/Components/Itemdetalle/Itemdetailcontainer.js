@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import {getProductsById} from "../../asyncmock.js"
 import ItemDetail from '../Itemdetalle/Itemdetail.js';
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 
 const ItemDetailContainer = () => {
     const [product,setProduct] = useState(null)
@@ -19,12 +19,13 @@ const {productId} = useParams()
     }, [productId])
 
     return(
-        <div className="main-content">
+        <div className='main-content'>
             <ItemDetail {...product} />
             </div>
         )
 }
-export default ItemDetailContainer
+export default ItemDetailContainer;
+
 
 
 
