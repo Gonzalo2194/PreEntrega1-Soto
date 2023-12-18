@@ -1,6 +1,7 @@
-import { NavLink,Link } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import CartWidget from "../CartWidget/cart";
 import logo from'./asset/logo.jpg';
+import {Link} from 'react-router-dom';
 
 
 
@@ -12,9 +13,9 @@ const NavBar = () => {
     return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <a className="navbar-item" href="#">
+                <NavLink className="navbar-item" to="/">
                     <img src={logo} alt="compraclic-logo"style={logoStyle}/>
-                </a>
+                </NavLink>
                 <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -23,7 +24,7 @@ const NavBar = () => {
             </div>
             <div id="navbarBasicExample" className="navbar-menu">
             <div className="navbar-start">
-                <a className="navbar-item" to="/">Inicio</a>
+                <NavLink className="navbar-item" to="/">Inicio</NavLink>
                 <div className="navbar-item has-dropdown is-hoverable">
                 <a className="navbar-link">Categorias</a>
                 <div className="navbar-dropdown">
