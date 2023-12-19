@@ -1,5 +1,5 @@
 import { NavLink} from "react-router-dom";
-import CartWidget from "../CartWidget/cart";
+import CartWidget from "../CartWidget/cartwidget";
 import logo from'./asset/logo.jpg';
 import {Link} from 'react-router-dom';
 
@@ -35,7 +35,6 @@ const NavBar = () => {
                 </div>
                 <a className="navbar-item">Ayuda</a>
             </div>
-
                 <CartWidget/>
                 <div className="navbar-end">
                     <div className="navbar-item">
