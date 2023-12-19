@@ -6,7 +6,7 @@ const { removeItem } = useContext(CartContext);
 
     return (
         <div className="cart-item">
-            <p>Nombre: {name}</p>
+            <p> {name}</p>
             <p>Precio:${price}</p>
             <p>Cantidad: {quantity}</p>
             <p>Subtotal: ${quantity*price}</p>

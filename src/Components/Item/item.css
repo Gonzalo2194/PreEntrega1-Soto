@@ -89,6 +89,7 @@
 
 .cart-item p {
     margin: 0;
+    margin-left: 5px;
 }
 
 .removeItemButton {
