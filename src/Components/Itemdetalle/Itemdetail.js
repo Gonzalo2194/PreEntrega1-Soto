@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Itemcount from "../Itemcount/Itemcount.js";
 import '../Item/item.css';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ id, name, img, category, description, price, stock, expanded, onToggleExpand }) => {
+  const [quantityAdded, setQuantityAdded] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  const handleOnAdd = (quantity) => {
+    setQuantityAdded(quantity);
+    const newTotalPrice = quantity * price;
+    setTotalPrice(newTotalPrice);
+  }
+  
+  
+  
+  
+  
   return (
     <article className={`Carditem ${expanded ? 'expanded' : ''}`}>
       <header className="Header">
@@ -25,14 +39,24 @@ const ItemDetail = ({ id, name, img, category, description, price, stock, expand
         </section>
       )}
       <footer className="Itemfooter">
+        {quantityAdded > 0 ? (
+          <div>
+            <p>Cantidad: {quantityAdded}</p>
+            <p>Total: ${totalPrice}</p>
+            <Link to="/cart" className="Option">
+              Terminar Compra
+            </Link>
+          </div>
+          ):
+          <Itemcount
+          initial={0}
+          stock={stock}
+          onAdd={(handleOnAdd)}
+        />
+      }
         <button className="Option" onClick={onToggleExpand}>
           Ver detalle
         </button>
-        <Itemcount
-          initial={1}
-          stock={stock}
-          onAdd={(quantity) => console.log("Cantidad agregada", quantity)}
-        />
       </footer>
     </article>
   );

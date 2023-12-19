@@ -12,7 +12,7 @@ const increment = () => {
 };
 
 const decrement = () => {
-    if (quantity > 1) {
+    if (quantity > 0) {
     setQuantity(quantity - 1);
     }
 };
