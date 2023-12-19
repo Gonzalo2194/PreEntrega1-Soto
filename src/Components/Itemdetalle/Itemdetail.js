@@ -1,21 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Itemcount from "../Itemcount/Itemcount.js";
 import '../Item/item.css';
 import { Link } from 'react-router-dom';
+
+import {CartContext} from '../context/cartcontext.js';
 
 const ItemDetail = ({ id, name, img, category, description, price, stock, expanded, onToggleExpand }) => {
   const [quantityAdded, setQuantityAdded] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
+  const { addItem } = useContext(CartContext);
+
   const handleOnAdd = (quantity) => {
     setQuantityAdded(quantity);
     const newTotalPrice = quantity * price;
     setTotalPrice(newTotalPrice);
-  }
-  
-  
-  
-  
+
+    const item = { id, name, price };
+
+    addItem(item, quantity);
+  };
   
   return (
     <article className={`Carditem ${expanded ? 'expanded' : ''}`}>

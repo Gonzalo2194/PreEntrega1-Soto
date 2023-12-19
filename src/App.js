@@ -6,10 +6,13 @@ import NavBar from '../src/Components/NavBar/navbar.js'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer.js';
 import ItemDetailContainer from './Components/Itemdetalle/Itemdetailcontainer.js';
 
+import { CartProvider } from './Components/context/cartcontext.js';
+
 
 function App() {
 return (
     <Router>
+    <CartProvider>
     <div>
         <NavBar/>
         <Routes>
@@ -18,8 +21,9 @@ return (
             <Route path="/product/:productId" element={<ItemDetailContainer />} />
             <Route path="*" element={<h1>404 ERROR</h1>} />
         </Routes>
-    </div>
-    </Router>
+        </div>
+        </CartProvider>
+        </Router>
 );
 }
 
